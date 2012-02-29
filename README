@@ -11,3 +11,10 @@ solrizeMETSDIP_v0.0 = %clientScriptsDirectory%solrizeMETSDIP.sh
 
 The success directory of Prepare AIP should be changed to:
 %watchDirectoryPath%createMETSDIP/
+
+*****
+
+Possible future development:
+* Rename createMETSDIP.rb to avoid confusion with createMETSDIP.sh.
+* Unify createMETSDIP.sh and createMETSDIP.rb into a single (Ruby?) script;
+  do the same with solrizeMETSDIP.sh and summarize_erc.rb.
