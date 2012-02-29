@@ -1,0 +1,14 @@
+#!/bin/bash
+# index-into
+
+source $HOME/.bashrc
+rvm use 1.9.2
+rvm gemset use blacklight
+
+APPDIR=$1
+FILE=$2
+
+cd $APPDIR
+echo $FILE
+rake -T | grep solr:index:json
+rake solr:index:json FILE=$FILE

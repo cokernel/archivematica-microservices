@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'pairtree'
+require 'pty'
+
+directory = ARGV[0]
+package = ARGV[1]
+
+pairtree = Pairtree.at(directory)
+identifier = File.basename(package)
+
+puts %-Constructing PairTree path for #{identifier}-
+obj = pairtree.mk(identifier)
+path = obj.path
+puts %-rsyncing object contents to #{path}-
+
+rsync_command = %./usr/bin/rsync -avPO #{package}/ #{path}.
+
+`#{rsync_command}`
