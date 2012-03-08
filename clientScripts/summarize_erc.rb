@@ -10,7 +10,7 @@ yaml = YAML.load_file(erc_file)
 
 metadata = {
   :id => identifier,
-  :title_display => yaml['who'],
+  :title_display => yaml['what'],
   :mets_url_s => url,
   :who_s => yaml['who'],
   :what_s => yaml['what'],
